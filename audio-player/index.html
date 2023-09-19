@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Audio Player</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-    <div class="wrapper"></div>
+    <div class="wrapper">
+        <div class="player">
+            <div class="player__header">
+                <button></button>
+                <h1 class="player__header-title">Now playing</h1>
+                <button></button>
+            </div>
+
+            <div class="player__cover"></div>
+            <audio src="./music/lesson.MP3" class="audio"></audio>
+            <div class="player__title"></div>
+            <div class="player__artist"></div>
+            <div class="player__progress"></div>
+            <div class="player__controls">
+                <div class="player__controls-btn prev"><img src="./assets/svg/shuffle.svg" alt="btn" class="btn"></div>
+                <div class="player__controls-btn prev"><img src="./assets/svg/prev.svg" alt="btn" class="btn"></div>
+                <div class="player__controls-btn play"><img src="./assets/svg/play.svg" alt="btn" class="btn"></div>
+                <div class="player__controls-btn next"><img src="./assets/svg/next.svg" alt="btn" class="btn"></div>
+                <div class="player__controls-btn prev"><img src="./assets/svg/repeat.svg" alt="btn" class="btn"></div>
+            </div>
+        </div>
+    </div>
     <script src="./app/main.js"></script>
 </body>
+
 </html>
