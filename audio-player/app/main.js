@@ -78,3 +78,6 @@ function setProgress(e) {
     audio.currentTime = (clickX / width) * duration
 }
 progressContainer.addEventListener('click', setProgress)
+
+//autoplay
+audio.addEventListener('ended', playNext)
