@@ -8,7 +8,10 @@ const nextBtn = document.querySelector('.next')
 const title = document.querySelector('.player__title')
 const cover = document.querySelector('.player__cover')
 
-const songs = ['lesson-1', 'lesson-2']
+const progressContainer = document.querySelector('.player__progress-container')
+const progress = document.querySelector('.progress-bar')
+
+const songs = ['lesson-1', 'lesson-2', 'lesson-3']
 let songIndex = 0
 let isPlaying = false;
 
@@ -58,3 +61,20 @@ function playPrev() {
     playSong()
 }
 prevBtn.addEventListener('click', playPrev)
+
+// Progress
+function updateProgress(e) {
+    const { duration, currentTime } = e.srcElement
+    const progressPercent = (currentTime / duration) * 100
+    progress.style.width = `${progressPercent}%`
+}
+audio.addEventListener('timeupdate', updateProgress)
+
+function setProgress(e) {
+    const width = this.clientWidth
+    const clickX = e.offsetX
+    const duration = audio.duration
+
+    audio.currentTime = (clickX / width) * duration
+}
+progressContainer.addEventListener('click', setProgress)
