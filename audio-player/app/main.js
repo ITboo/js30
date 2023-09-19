@@ -37,3 +37,24 @@ playBtn.addEventListener('click', () => {
         pauseSong()
     }
 })
+nextBtn.addEventListener('click', playNext)
+
+function playNext() {
+    songIndex++
+    if (songIndex > songs.length - 1) {
+        songIndex = 0
+    }
+
+    loadSong(songs[songIndex])
+    playSong()
+}
+function playPrev() {
+    songIndex--
+    if (songIndex < 0) {
+        songIndex = songs.length - 1
+
+    }
+    loadSong(songs[songIndex])
+    playSong()
+}
+prevBtn.addEventListener('click', playPrev)
