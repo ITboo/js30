@@ -47,3 +47,6 @@ html {
       -ms-flex-align: center;
           align-items: center;
 }
+.player__controls .player__controls-btn {
+  cursor: pointer;
+}
