@@ -19,25 +19,31 @@ const end = document.querySelector('.end-value')
 const songs = [
     {
         title: 'lesson-1',
-        cover: '1'
+        cover: '1',
+        time: '1:11',
     },
     {
         title: 'lesson-2',
-        cover: '2'
+        cover: '2',
+        time: '0:47',
     },
     {
         title: 'lesson-3',
-        cover: '3'
+        cover: '3',
+        time: '0:51',
     },]
 let songIndex = 0
 let isPlaying = false;
 
+document.onload
 loadSong(songs[songIndex])
 
 function loadSong(song) {
+
     title.innerHTML = `세종한국어: ${song.title}`
     audio.src = `./music/${song.title}.mp3`
     cover.src = `./assets/img/${song.cover}.png`
+    end.textContent=`${song.time}`
 }
 
 
@@ -88,6 +94,13 @@ function updateProgress(e) {
     const { duration, currentTime } = e.srcElement
     const progressPercent = (currentTime / duration) * 100
     progress.style.width = `${progressPercent}%`
+ 
+    let currentMinutes = Math.floor(currentTime / 60);
+    let currentSeconds = Math.floor(currentTime - currentMinutes * 60);
+    if (currentSeconds < 10) { currentSeconds = "0" + currentSeconds; }
+    if (currentMinutes < 10) { currentMinutes = "0" + currentMinutes; }
+
+    start.textContent = currentMinutes + ":" + currentSeconds;
 }
 audio.addEventListener('timeupdate', updateProgress)
 
@@ -99,30 +112,6 @@ function setProgress(e) {
     audio.currentTime = (clickX / width) * duration
 }
 progressContainer.addEventListener('click', setProgress)
-
-//timer
-function reset() {
-    start.textContent = "00:00";
-    end.textContent = "00:00";
-}
-function setUpdate(e) {
-    const { currentTime, duration } = e.srcElement
-
-    let currentMinutes = Math.floor(currentTime / 60);
-    let currentSeconds = Math.floor(currentTime - currentMinutes * 60);
-    let durationMinutes = Math.floor(duration / 60);
-    let durationSeconds = Math.floor(duration - durationMinutes * 60);
-
-    if (currentSeconds < 10) { currentSeconds = "0" + currentSeconds; }
-    if (durationSeconds < 10) { durationSeconds = "0" + durationSeconds; }
-    if (currentMinutes < 10) { currentMinutes = "0" + currentMinutes; }
-    if (durationMinutes < 10) { durationMinutes = "0" + durationMinutes; }
-
-    start.textContent = currentMinutes + ":" + currentSeconds;
-    end.textContent = durationMinutes + ":" + durationSeconds;
-}
-
-
 
 //autoplay
 audio.addEventListener('ended', playNext)
