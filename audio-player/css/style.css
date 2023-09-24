@@ -16,6 +16,18 @@ html {
   background-color: rgb(22, 22, 22);
 }
 
+.player__cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.player__cover img {
+  width: 50%;
+}
+
 .player {
   margin: 0 auto;
   padding: 20px;
@@ -24,16 +36,9 @@ html {
   border: solid white 3px;
   border-radius: 30px;
 }
-.player .player__header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.player h1 {
+  text-align: center;
+  margin-bottom: 5%;
 }
 
 .player__controls {
@@ -64,11 +69,20 @@ html {
   height: 20px;
   border-radius: 5px;
   width: 100%;
-  background-color: #fff;
+  background-color: rgb(195, 158, 199);
 }
 .player__progress-container .progress-bar {
   width: 0;
   height: 6px;
   background-color: rebeccapurple;
   border-radius: 5px;
+}
+
+.timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }

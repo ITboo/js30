@@ -15,6 +15,13 @@ html {
     background-color: rgb(22, 22, 22);
 }
 
+.player__cover{
+    display: flex;
+    justify-content: center;
+    img{
+        width: 50%;
+    }
+}
 .player {
     margin: 0 auto;
     padding: 20px;
@@ -22,11 +29,9 @@ html {
     height: 90%;
     border: solid white 3px;
     border-radius: 30px;
-
-    .player__header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    h1{
+        text-align: center;
+        margin-bottom: 5%;
     }
 }
 
@@ -49,7 +54,7 @@ html {
     height: 20px;
     border-radius: 5px;
     width: 100%;
-    background-color: #fff;
+    background-color: rgb(195, 158, 199);
 
     .progress-bar {
         width: 0;
@@ -57,4 +62,9 @@ html {
         background-color: rebeccapurple;
         border-radius: 5px;
     }
+}
+
+.timer{
+    display: flex;
+    justify-content: space-between;
 }

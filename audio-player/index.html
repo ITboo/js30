@@ -12,24 +12,33 @@
     <div class="wrapper">
         <div class="player">
             <div class="player__header">
-                <button></button>
+
                 <h1 class="player__header-title">Now playing</h1>
-                <button></button>
+
             </div>
 
-            <div class="player__cover"></div>
+            <div class="player__cover">
+                <img src="./assets/img/1.png" alt="img" class="cover__img">
+            </div>
             <audio src="./music/lesson.mp3" class="audio"></audio>
             <div class="player__title"></div>
             <div class="player__artist"></div>
             <div class="player__progress-container">
                 <div class="progress-bar"></div>
+                
+            </div>
+            <div class="timer">
+                <div class="timer__start">
+                    <span class="start-value">00:00</span>
+                </div>
+                <div class="timer__end">
+                    <span class="end-value">00:00</span>
+                </div>
             </div>
             <div class="player__controls">
-                <div class="player__controls-btn shuffle"><img src="./assets/svg/shuffle.svg" alt="btn" class="btn"></div>
                 <div class="player__controls-btn prev"><img src="./assets/svg/prev.svg" alt="btn" class="btn"></div>
                 <div class="player__controls-btn play"><img src="./assets/svg/play.svg" alt="btn" class="btn"></div>
                 <div class="player__controls-btn next"><img src="./assets/svg/next.svg" alt="btn" class="btn"></div>
-                <div class="player__controls-btn repeat"><img src="./assets/svg/repeat.svg" alt="btn" class="btn"></div>
             </div>
         </div>
     </div>
