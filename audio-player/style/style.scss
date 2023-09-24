@@ -105,6 +105,12 @@ main {
     display: flex;
     justify-content: space-between;
 }
+.mute{
+    cursor: pointer;
+    &:hover{
+        color: #ad5ab1;
+    }
+}
 
 .footer {
     display: flex;

@@ -34,6 +34,7 @@ const songs = [
     },]
 let songIndex = 0
 let isPlaying = false;
+let isMuted = false;
 
 document.onload
 loadSong(songs[songIndex])
@@ -115,3 +116,14 @@ progressContainer.addEventListener('click', setProgress)
 
 //autoplay
 audio.addEventListener('ended', playNext)
+
+//mute
+document.querySelector('#muted').onclick = function() {
+    if (audio.muted === true) {
+      document.querySelector('#muted').innerHTML = 'Отключить звук'
+      audio.muted = false;
+    } else {
+      document.querySelector('#muted').innerHTML = 'Включить звук'
+      audio.muted = true;
+    }
+  }

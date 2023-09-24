@@ -125,6 +125,13 @@ main {
           justify-content: space-between;
 }
 
+.mute {
+  cursor: pointer;
+}
+.mute:hover {
+  color: #ad5ab1;
+}
+
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
