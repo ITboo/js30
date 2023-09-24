@@ -70,9 +70,29 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-.player__controls .player__controls-btn {
   cursor: pointer;
+  margin: 30px 0;
+}
+
+.playBtn {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 0;
+  height: 74px;
+  border-style: solid;
+  border-width: 37px 0 37px 60px;
+  border-color: transparent transparent transparent #541358;
+  cursor: pointer;
+  will-change: border-width;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.playBtn.paused {
+  border-style: double;
+  border-width: 0px 0 0px 60px;
+}
+.playBtn:hover {
+  border-color: transparent transparent transparent #ad5ab1;
 }
 
 .player__progress-container {

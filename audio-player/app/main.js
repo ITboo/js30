@@ -1,7 +1,7 @@
 const player = document.querySelector('.player')
 const audio = document.querySelector('.audio')
 
-const playBtn = document.querySelector('.play')
+const playBtn = document.querySelector('.playBtn')
 const prevBtn = document.querySelector('.prev')
 const nextBtn = document.querySelector('.next')
 
@@ -37,7 +37,7 @@ loadSong(songs[songIndex])
 function loadSong(song) {
     title.innerHTML = `세종한국어: ${song.title}`
     audio.src = `./music/${song.title}.mp3`
-    cover.src=`./assets/img/${song.cover}.png`
+    cover.src = `./assets/img/${song.cover}.png`
 }
 
 
@@ -55,7 +55,11 @@ function pauseSong() {
 playBtn.addEventListener('click', () => {
     isPlaying ? pauseSong() : playSong()
 })
-nextBtn.addEventListener('click', playNext)
+
+function toggleBtn() {
+    playBtn.classList.toggle('paused');
+}
+playBtn.addEventListener('click', toggleBtn);
 
 //next-prev
 function playNext() {
@@ -67,6 +71,7 @@ function playNext() {
     loadSong(songs[songIndex])
     playSong()
 }
+nextBtn.addEventListener('click', playNext)
 function playPrev() {
     songIndex--
     if (songIndex < 0) {
