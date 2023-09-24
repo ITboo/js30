@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    color: aliceblue;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    width: 100%;
+    min-height: 100%;
+    background-color: rgb(22, 22, 22);
+}
+
+.player__cover {
+    display: flex;
+    justify-content: center;
+
+    img {
+        width: 50%;
+    }
+}
+
+.player {
+    margin: 0 auto;
+    padding: 20px;
+    width: 30%;
+    height: 90%;
+    border: solid white 3px;
+    border-radius: 30px;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 5%;
+    }
+
+    .player__title {
+        margin-top: 20px;
+    }
+}
+
+.player__controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin: 30px 0;
+}
+
+.playBtn {
+
+    box-sizing: border-box;
+    width: 0;
+    height: 74px;
+    border-style: solid;
+    border-width: 37px 0 37px 60px;
+    border-color: transparent transparent transparent #541358;
+    cursor: pointer;
+    will-change: border-width;
+    transition: all .2s ease;
+
+    &.paused {
+        border-style: double;
+        border-width: 0px 0 0px 60px;
+    }
+
+    &:hover {
+        border-color: transparent transparent transparent #ad5ab1;
+    }
+}
+
+
+.player__progress-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+
+    cursor: pointer;
+    height: 20px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: rgb(195, 158, 199);
+
+    .progress-bar {
+        width: 0;
+        height: 6px;
+        background-color: rebeccapurple;
+        border-radius: 5px;
+    }
+}
+
+.timer {
+    display: flex;
+    justify-content: space-between;
+}
+.mute{
+    cursor: pointer;
+    &:hover{
+        color: #ad5ab1;
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 50px;
+    color: rgb(111, 111, 111, 0.5);
+
+    font-size: 20px;
+
+    a {
+        text-decoration: none;
+        color: rgb(111, 111, 111, 0.5);
+        transition: all ease-out 0.5s;
+    }
+
+    a:hover {
+        transform: scale(1.2);
+        transition: all ease-out 0.5s;
+    }
+
+    .rss__img {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .player {
+        width: 50%;
+}
+}
