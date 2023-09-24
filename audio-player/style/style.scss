@@ -137,3 +137,12 @@ main {
         width: 100px;
     }
 }
+
+@media screen and (max-width:1200px) {
+    .player {
+        width: 50%;
+}
+.playBtn {
+    height: 30px;
+}
+}
