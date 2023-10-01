@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <a href="#" class="header__link"><i class="fas fa-camera"></i></a>
+            <h2 class="header__title">Image Galery</h2>
+        </div>
+        <div id="header__search">
+            <input id="input" class="header__search-input" type="text" placeholder="Search..." autofocus="true">
+
+            <i id="search" class="fas fa-search" title="Search"></i>
+            <span id="clear" class="search__clear" title="Clear">X</span>
+
+        </div>
+    </header>
+    <div class="wrapper">
+        <main class="main">
+            <div id="grid" class="grid">
+                <div class="img" style="background-image: url(&quot;https://source.unsplash.com/random?sig=100&quot;);"></div>
+                <div class="img" style="background-image: url(&quot;https://source.unsplash.com/random?sig=101&quot;);"></div>
+                <div class="img" style="background-image: url(&quot;https://source.unsplash.com/random?sig=111&quot;);"></div>
+                <div class="img" style="background-image: url(&quot;https://source.unsplash.com/random?sig=200&quot;);"></div>
+                <div class="img" style="background-image: url(&quot;https://source.unsplash.com/random?sig=201&quot;);"></div>
+                <div class="img" style="background-image: url(&quot;https://source.unsplash.com/random?sig=222&quot;);"></div>
+                <div class="img" style="background-image: url(&quot;https://source.unsplash.com/random?sig=300&quot;);"></div>
+                <div class="img" style="background-image: url(&quot;https://source.unsplash.com/random?sig=301&quot;);"></div>
+                <div class="img" style="background-image: url(&quot;https://source.unsplash.com/random?sig=303&quot;);"></div>
+            </div>
+        </main>
+        <footer class="footer">
+            <a href="https://github.com/ITboo" class="github">@ITboo</a>
+            <span class="year">2023</span>
+            <a href="https://rs.school/js-stage0/" class="rss__link">
+                <img src="./assets/svg/rs_school_js.svg" alt="rss" class="rss__img">
+            </a>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
