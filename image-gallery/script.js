@@ -1,14 +1,26 @@
-document.querySelector("#input").addEventListener("keydown", (event) => {
+const input = document.querySelector("#input")
+const search = document.querySelector("#search")
+const clearBtn = document.querySelector('#clear')
+
+
+
+clearBtn.addEventListener('click', () => {
+    input.value = '';
+})
+
+input.addEventListener("keydown", (event) => {
     if (event.key == "Enter") {
-        console.log('Pressed Enter')
+        console.log('Pressed Enter');
         apiRequest();
     }
 });
 
-document.querySelector("#search").addEventListener("click", () => {
-    console.log('Pressed search button')
+search.addEventListener("click", () => {
+    console.log('Pressed search button');
     apiRequest();
 });
+
+
 
 apiRequest = () => {
 

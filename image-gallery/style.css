@@ -42,9 +42,14 @@ main {
     text-transform: uppercase;
     color: white;
 }
-.fa-camera{
+
+.fa-camera {
     font-size: 50px;
     color: orange;
+}
+.header__search{
+    display: flex;
+    align-items: center;
 }
 .header__search-input {
     width: 320px;
@@ -55,20 +60,32 @@ main {
 .fa-search {
     cursor: pointer;
     position: absolute;
-    cursor: pointer;
     top: 4.5%;
     right: 11%;
     transition: 1s;
 }
 
-.grid{
+.search__clear {
+    margin-left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+.search__clear:hover {
+    color: red;
+    transition: all ease 0.3s;
+}
+
+.grid {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: flex-start;
-  }
-  .img{
+}
+
+.img {
     width: 380px;
     height: 214px;
     margin-top: 15px;
@@ -76,7 +93,13 @@ main {
     background-size: cover;
     border-radius: 2px;
     cursor: pointer;
-  }
+    transition: all ease 0.3s;
+}
+
+.img:hover {
+    transform: scale(1.05);
+    transition: all ease 0.3s;
+}
 
 .footer {
     display: flex;
