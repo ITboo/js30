@@ -1,6 +1,7 @@
 const input = document.querySelector("#input")
 const search = document.querySelector("#search")
 const clearBtn = document.querySelector('#clear')
+const grid = document.querySelector("#grid")
 
 clearBtn.addEventListener('click', () => {
     input.value = '';
@@ -21,7 +22,7 @@ search.addEventListener("click", () => {
 
 apiRequest = () => {
 
-    document.querySelector("#grid").textContent = "";
+    grid.textContent = "";
 
     const url = 'https://api.unsplash.com/search/photos?query=' + input.value + '&per_page=9&client_id=bbYR55nFa3bL0xSrlOsqTELpdpSgHAouGO2m_2tYhRg';
 
@@ -54,7 +55,7 @@ loadImages = (data) => {
         image.addEventListener("dblclick", function () {
             window.open(data.results[i].links.download, '_blank');
         })
-        document.querySelector("#grid").appendChild(image);
+        grid.appendChild(image);
     }
 }
 
@@ -63,5 +64,5 @@ loadError = () => {
     const error = document.createElement("span")
     error.textContent = errorMsg
     error.classList.add('nothing')
-    document.querySelector("#grid").appendChild(error);
+    grid.appendChild(error);
 }
