@@ -2,8 +2,6 @@ const input = document.querySelector("#input")
 const search = document.querySelector("#search")
 const clearBtn = document.querySelector('#clear')
 
-
-
 clearBtn.addEventListener('click', () => {
     input.value = '';
 })
@@ -21,7 +19,6 @@ search.addEventListener("click", () => {
 });
 
 
-
 apiRequest = () => {
 
     document.querySelector("#grid").textContent = "";
@@ -36,8 +33,14 @@ apiRequest = () => {
         })
 
         .then(data => {
-            console.log('Loading images')
-            loadImages(data);
+            if (data.results.length === 0) {
+                console.log('Nothing')
+                loadError()
+            } else {
+                console.log('Loading images')
+                console.log(data)
+                loadImages(data);
+            }
         })
 
         .catch(error => console.log(error));
@@ -53,4 +56,12 @@ loadImages = (data) => {
         })
         document.querySelector("#grid").appendChild(image);
     }
+}
+
+loadError = () => {
+    const errorMsg = 'Sorry! Nothing was found for your ' + input.value;
+    const error = document.createElement("span")
+    error.textContent = errorMsg
+    error.classList.add('nothing')
+    document.querySelector("#grid").appendChild(error);
 }

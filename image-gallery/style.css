@@ -47,10 +47,12 @@ main {
     font-size: 50px;
     color: orange;
 }
-.header__search{
+
+.header__search {
     display: flex;
     align-items: center;
 }
+
 .header__search-input {
     width: 320px;
     padding: 10px 10px;
@@ -99,6 +101,11 @@ main {
 .img:hover {
     transform: scale(1.05);
     transition: all ease 0.3s;
+}
+
+.nothing {
+    margin-top: 20px;
+    font-size: 32px;
 }
 
 .footer {
