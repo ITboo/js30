@@ -1,3 +1,4 @@
+/*COMMON*/
 * {
     box-sizing: border-box;
     margin: 0;
@@ -15,32 +16,72 @@ body {
     color: white;
 }
 
-button{
+button {
     cursor: pointer;
     background-color: white;
     padding: 10px 10px;
     border-radius: 30px;
-    border: solid white 1px;
+    border: solid rgb(177, 71, 71) 1px;
     width: 100px;
-    color: pink;
+    color: rgb(177, 71, 71);
     font-weight: bold;
 }
+
 .container {
     margin: 0 auto;
-    width: 1000px;
+    width: 1200px;
 }
 
+.game {
+    padding-top: 45px;
+    display: flex;
+    justify-content: space-between;
+}
 
-.footer__content{
+/*SCORE*/
+.place-count {
+    margin-left: 20px;
+}
+
+/*BOARD*/
+.game__board {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 20px;
+    width: 550px;
+}
+
+.board__btn {
+    margin: 0 auto;
+}
+
+.card__img {
+    width: 130px;
+    border: solid 3px rgb(177, 71, 71);
+    border-radius: 20px;
+}
+
+/*FOOTER*/
+.footer__content {
+    padding: 20px;
     display: flex;
     justify-content: right;
     align-items: center;
     gap: 40px;
 }
-.footer__content-link{
+
+.footer__content-link {
     text-decoration: none;
     color: white;
 }
-.rss__img{
+
+.rss__img {
     width: 30%;
 }
