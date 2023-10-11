@@ -43,6 +43,10 @@ button {
     margin-left: 20px;
 }
 
+.game__left{
+    max-width: 800px;
+}
+
 /*BOARD*/
 .game__board {
     display: flex;
@@ -77,11 +81,14 @@ button {
 
 /*FOOTER*/
 .footer__content {
-    padding: 20px;
+margin: 0;
+    padding: 10px 20px 0;
     display: flex;
     justify-content: right;
     align-items: center;
     gap: 40px;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .footer__content-link {
@@ -90,5 +97,23 @@ button {
 }
 
 .rss__img {
-    width: 30%;
+    width: 80px;
 }
+
+#score{
+    transition: 0.70s;
+    transform: scale(1);
+  }
+#score:hover{
+    transition: 0.70s;
+    transform:scale(1.3);
+  }
+
+#settings{
+    transition: 0.70s;
+    transform: rotate(0deg);
+  }
+#settings:hover{
+    transition: 0.70s;
+    transform: rotate(180deg);
+  }
