@@ -63,9 +63,16 @@ button {
 }
 
 .card__img {
+    cursor: pointer;
     width: 130px;
     border: solid 3px rgb(177, 71, 71);
     border-radius: 20px;
+    transition: all ease 0.3s;
+}
+
+.card__img:hover{
+    border: solid 3px rgb(255, 251, 0); 
+    transition: all ease 0.3s;
 }
 
 /*FOOTER*/
