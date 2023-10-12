@@ -1,23 +1,23 @@
 export const factsArray = [
     {
         id: '1',
-        eng: 'assets/img/1.jpg'
+        eng: 'Korea is one of the world’s largest consumers of garlic.'
     },
     {
         id: '2',
-        eng: 'assets/img/2.jpg'
+        eng: 'Koreans don’t have a Western approach to dessert.'
     },
     {
         id: '3',
-        eng: 'assets/img/3.jpg'
+        eng: 'The most popular sauce in Korea is gochujang.'
     },
     {
         id: '4',
-        eng: 'assets/img/4.jpg'
+        eng: 'You can find some of the same foods from the royal cuisine in temple food.'
     },
     {
         id: '5',
-        eng: 'assets/img/5.jpg'
+        eng: 'Rice was used to pay taxes.'
     },
 
 ]

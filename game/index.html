@@ -5,13 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./assets/favicon.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
 
     <title>Memory Game</title>
 </head>
 
 <body>
-    <header class="header"></header>
+    <header class="header">
+        <div class="container">
+            <div class="steps">
+                <span class="steps__text">Steps:</span>
+                <span class="steps__count">0</span>
+            </div>
+        </div>
+    </header>
     <main class="main">
         <div class="container">
             <div class="game">
@@ -69,8 +79,12 @@
                     </table>
                      <button class="score__btn">Clear</button> 
                 </div> -->
-                <div class="game__left">
-                    <p class="fact"></p>
+                <div class="game__facts">
+                    <img src="/game/assets/img/924fe3a0e2e33946e377ffae1681751a.jpg" alt="cook" class="facts__img">
+                    <div class="facts__wrapper">
+                        <h2 class="facts__title">Hey! Did you know?</h2>
+                        <p class="fact"></p>
+                    </div>
                 </div>
 
                 <div class="game__board">
