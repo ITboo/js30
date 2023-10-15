@@ -23,6 +23,8 @@ fetch("./script/cards.json")
     generateCards();
   });
 
+
+
 function shuffleCards() {
   let currentIndex = cards.length,
     randomIndex,
@@ -166,4 +168,28 @@ const finishGame = () => {
   console.log('finish game');
   newScore();
   newLocalStorage();
+  showMsg()
+}
+
+const showMsg = () => {
+  const winModal = document.getElementById('winModal');
+  const winText = document.querySelector('.win__text');
+  const closeBtn = document.querySelector('.close__btn')
+  const newGame = document.querySelector('.new')
+
+  winModal.style.display = "block";
+  winText.textContent = `You found all matches in ${score} moves. Well done!`
+  window.onclick = function (event) {
+    if (event.target == winModal) {
+      winModal.style.display = "none";
+    }
+  }
+  closeBtn.addEventListener('click', () => {
+    winModal.style.display = "none";
+
+  })
+  newGame.addEventListener('click', () => {
+    winModal.style.display = "none";
+    restart();
+  })
 }
