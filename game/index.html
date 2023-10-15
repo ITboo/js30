@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <audio src='./assets/audio/audio.mp3' autoplay='autoplay' loop='loop'></audio>
     <header class="header">
         <div class="container">
             <div class="steps">
@@ -25,60 +26,7 @@
     <main class="main">
         <div class="container">
             <div class="game">
-                <!-- <div class="game__score">
-                    <h2 class="game__score-title">Your last 10 games</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Game</th>
-                                <th>Moves</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="place">
-                                <td>1</td>
-                                <td class="place-count" data-place="1">0</td>
-                            </tr>
-                            <tr class="place">
-                                <td>2</td>
-                                <td class="place-count" data-place="2">0</td>
-                            </tr>
-                            <tr class="place">
-                                <td>3</td>
-                                <td class="place-count" data-place="3">0</td>
-                            </tr>
-                            <tr class="place">
-                                <td>4</td>
-                                <td class="place-count" data-place="4">0</td>
-                            </tr>
-                            <tr class="place">
-                                <td>5</td>
-                                <td class="place-count" data-place="5">0</td>
-                            </tr>
-                            <tr class="place">
-                                <td>6</td>
-                                <td class="place-count" data-place="6">0</td>
-                            </tr>
-                            <tr class="place">
-                                <td>7</td>
-                                <td class="place-count" data-place="7">0</td>
-                            </tr>
-                            <tr class="place">
-                                <td>8</td>
-                                <td class="place-count" data-place="8">0</td>
-                            </tr>
-                            <tr class="place">
-                                <td>9</td>
-                                <td class="place-count" data-place="9">0</td>
-                            </tr>
-                            <tr class="place">
-                                <td>10</td>
-                                <td class="place-count" data-place="10">0</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                     <button class="score__btn">Clear</button> 
-                </div> -->
+
                 <div class="game__facts">
                     <img src="/game/assets/img/924fe3a0e2e33946e377ffae1681751a.jpg" alt="cook" class="facts__img">
                     <div class="facts__wrapper">
@@ -166,7 +114,73 @@
         </div>
 
     </footer>
+
+    <div id="settingModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span id="settingSpan" class="close close-settings">&times;</span>
+                <h2>Settings</h2>
+            </div>
+            <div class="modal-body">
+                <p>Какой-то текст в теле модального окна</p>
+                <p>Ещё другой текст...</p>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+
+    <div id="scoreModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Your last 10 games</h2>
+            </div>
+            <div class="modal-body">
+                <div class="game__score">
+                    <div class="score__wrapper">
+                        <div class="score__table">
+                            <div class="table__game">
+                                <h4>Game</h4>
+                                <span>1</span>
+                                <span>2</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>5</span>
+                                <span>6</span>
+                                <span>7</span>
+                                <span>8</span>
+                                <span>9</span>
+                                <span>10</span>
+                            </div>
+                            <div class="table__moves">
+                                <h4>Moves</h4>
+                                <span data-place="1">0</span>
+                                <span data-place="2">0</span>
+                                <span data-place="3">0</span>
+                                <span data-place="4">0</span>
+                                <span data-place="5">0</span>
+                                <span data-place="6">0</span>
+                                <span data-place="7">0</span>
+                                <span data-place="8">0</span>
+                                <span data-place="9">0</span>
+                                <span data-place="10">0</span>
+                            </div>
+                        </div>
+
+                        <img src="./assets/img/score.jpg" alt="chief">
+                    </div>
+                    <button class="score__btn">Clear</button>
+                </div>
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+
     <script src="./main.js" type="module"></script>
+    <script src="./script/settings.js" type="module"></script>
+    <script src="./script/score.js" type="module"></script>
 </body>
 
 </html>

@@ -112,4 +112,4 @@ function restart() {
     const random = Math.floor(Math.random() * (factsArray.length - 1));
     const randomFact = factsArray[random];
     fact.textContent = randomFact.eng;
-  }
+  }  

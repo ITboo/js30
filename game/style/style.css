@@ -27,6 +27,11 @@ button {
     color: rgb(177, 71, 71);
     font-weight: bold;
 }
+button:hover{
+    background-color: rgb(177, 71, 71);
+    color: white;
+    transition: all ease 0.3s;
+}
 
 .container {
     margin: 0 auto;
@@ -97,11 +102,7 @@ button {
     margin: 0 auto;
     transition: all ease 0.3s;
 }
-.board__btn:hover{
-    background-color: rgb(177, 71, 71);
-    color: white;
-    transition: all ease 0.3s;
-}
+
 
 .card {
     cursor: pointer;
@@ -193,4 +194,75 @@ button {
 #settings:hover {
     transition: 0.70s;
     transform: rotate(180deg);
+}
+
+/*SETTINGS*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff2ef;
+    margin: auto;
+    padding: 0;
+    border: 5px solid rgb(177, 71, 71);
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: rgb(177, 71, 71);
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: rgb(177, 71, 71);
+    color: white;
+}
+
+.score__wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.score__table{
+    display: flex;
+    gap: 30px;
+    color:rgb(177, 71, 71);
+}
+.table__game,
+.table__moves{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
