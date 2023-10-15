@@ -23,8 +23,6 @@ fetch("./script/cards.json")
     generateCards();
   });
 
-
-
 function shuffleCards() {
   let currentIndex = cards.length,
     randomIndex,
@@ -169,6 +167,7 @@ const finishGame = () => {
   newScore();
   newLocalStorage();
   showMsg()
+  matches=0
 }
 
 const showMsg = () => {
